@@ -1,0 +1,880 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 105px;
+}
+
+body {
+  font-family: 'Poppins', 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  padding-top: 108px;
+  color: #1f2937;
+  background-image: url("https://www.transparenttextures.com/patterns/absurdity.png");
+  background-color: #f9fafb;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #93c5fd;
+}
+
+/* Header */
+header {
+  width: 100%;
+  background-color: #1e3a8a;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.logo a {
+  font-size: 1.25rem;
+  line-height: 36px;
+}
+
+nav.navbar {
+  display: flex;
+  gap: 2rem;
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+nav.navbar a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav.navbar a:hover {
+  color: #93c5fd;
+}
+
+.founded-year {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+/* Dropdown menu styling */
+.dropdown {
+  position: relative;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: #1e40af;
+  padding: 0.5rem 0;
+  border-radius: 0.5rem;
+  min-width: 200px;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.submenu a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: white;
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+.submenu a:hover {
+  background-color: #2563eb;
+  color: #fff;
+}
+
+.dropdown:hover .submenu {
+  display: block;
+}
+
+/* Hero Section */
+.hero-video {
+  position: relative;
+  height: 82vh;
+  overflow: hidden;
+}
+
+.hero-video .bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.hero-overlay {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  background: rgba(0, 33, 77, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  text-align: center;
+}
+
+.hero-overlay h1 {
+  font-family: 'Playfair Display', serif;
+  color: #ffffff;
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  line-height: 1.2;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.hero-overlay p {
+  font-family: 'Poppins', sans-serif;
+  max-width: 700px;
+  margin: auto;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  font-weight: 400;
+  color: #e2e8f0;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+.hero-overlay .btn {
+  background: #2563eb;
+  color: white;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  display: inline-block;
+  transition: transform 0.3s ease, background 0.3s ease;
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 0.6s;
+}
+
+.hero-overlay .btn:hover {
+  background: #1e40af;
+  transform: scale(1.05);
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* About Section */
+#about {
+  background-color: #ebf2fa;
+  background-image: url("https://www.transparenttextures.com/patterns/absurdity.png");
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+
+#about .section-title {
+  font-size: 2rem;
+  color: #1e3a8a;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+#about .section-title::after {
+  content: '';
+  width: 60px;
+  height: 4px;
+  background: #2563eb;
+  display: block;
+  margin: 0.5rem auto 1.5rem;
+  border-radius: 999px;
+}
+
+#about .subtitle {
+  color: #2563eb;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.company-description {
+  color: #334155;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+/* Vision and Mission */
+.vision-mission-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.vision-box,
+.mission-box {
+  background-color: #eff6ff;
+  border-left: 6px solid #2563eb;
+  padding: 2rem;
+  max-width: 400px;
+  text-align: left;
+  border-radius: 1rem;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+}
+
+.vision-box h3,
+.mission-box h3 {
+  color: #1e3a8a;
+  margin-bottom: 0.75rem;
+}
+
+.vision-box p,
+.mission-box p {
+  color: #475569;
+  line-height: 1.6;
+}
+
+/* Fade-in on scroll */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Directors Section */
+#directors {
+  background-color: #ffffff;
+  background-image: url("https://www.transparenttextures.com/patterns/absurdity.png");
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+  text-align: center;
+  position: relative;
+}
+
+#directors h2 {
+  font-size: 2rem;
+  color: #1e3a8a;
+  margin-bottom: 0.5rem;
+  font-weight: 800;
+  position: relative;
+}
+
+#directors .subtitle {
+  color: #475569;
+  margin-bottom: 2rem;
+}
+
+.directors-grid-enhanced {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.directors-card {
+  background: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  width: 220px;
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.directors-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(37, 99, 235, 0.2);
+}
+
+.card-image.circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-image.circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-content h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin: 0.25rem 0;
+}
+
+.card-content .role {
+  font-size: 0.9rem;
+  color: #475569;
+  margin-bottom: 0.5rem;
+}
+
+.badge {
+  background: #2563eb;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === Services Section === */
+#services {
+  background-color: #ebf2fa;
+  background-image: url("https://www.transparenttextures.com/patterns/absurdity.png");
+  background-repeat: repeat;
+  padding-top: 1rem;
+  padding-bottom: 4rem;
+  text-align: center;
+}
+
+.services-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.service-card {
+  background-size: cover;
+  background-position: center;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  width: 330px;
+  min-height: 450px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.service-content {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 1.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  width: 100%;
+  text-align: left;
+}
+
+.service-content h3 {
+  font-size: 1.3rem;
+  color: #1e3a8a;
+  margin-bottom: 0.5rem;
+}
+
+.service-content p {
+  font-size: 1rem;
+  color: #374151;
+  line-height: 1.6;
+}
+
+/* === Projects Section Styles === */
+#projects {
+  background-image: url("https://www.transparenttextures.com/patterns/absurdity.png");
+  background-color: #f9fafb;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+
+.project-status {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem 1rem;
+  flex-wrap: wrap;
+}
+
+.project-section {
+  display: none;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.project-count-box {
+  background: linear-gradient(to right, #2563eb, #1e3a8a);
+  color: white;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin: 0.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  width: 230px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-count-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.project-count-box h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0rem;
+}
+
+.project-count-box p {
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.carousel-wrapper {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 0;
+  scroll-behavior: smooth;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-card {
+  flex: 0 0 auto;
+  background-color: #ffffff;
+  padding: 1rem 1.5rem;
+  border-radius: 999px;
+  text-decoration: none;
+  color: #1e3a8a;
+  font-weight: 600;
+  white-space: nowrap;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.carousel-card:hover {
+  transform: scale(1.05);
+  background-color: #ebf4ff;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0 0.5rem;
+  color: #1e3a8a;
+  z-index: 10;
+}
+
+.carousel-btn.prev {
+  left: -48px;
+}
+
+.carousel-btn.next {
+  right: -48px;
+}
+
+.carousel-container {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem 0;
+  padding-bottom: 2rem;
+}
+
+.carousel-track-container {
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-card {
+  flex: 0 0 280px;
+  margin: 0 1rem;
+  background: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s ease;
+}
+
+.carousel-card:hover {
+  transform: scale(1.05);
+}
+
+.carousel-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-bottom: 4px solid #2563eb;
+}
+
+.carousel-card h3 {
+  font-size: 1.2rem;
+  color: #1e3a8a;
+  margin: 1rem 0;
+}
+
+.carousel-btn {
+  background-color: #1e3a8a;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  margin: 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-btn:hover {
+  background-color: #2563eb;
+}
+
+/* === Contact Section === */
+#contact {
+  background-color: #ebf2fa;
+  background-image: url("https://www.transparenttextures.com/patterns/absurdity.png");
+  background-repeat: repeat;
+  color: #334155;
+  padding: 1rem 1rem;
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #1e3a8a;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+#contact .section-title {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #1e3a8a;
+  font-weight: 800;
+}
+
+.subtitle-light {
+  color: #475569;
+  margin-bottom: 2rem;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-box,
+.contact-form {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 450px;
+  text-align: left;
+}
+
+.contact-box h2,
+.contact-form h2 {
+  font-size: 1.5rem;
+  color: #1e3a8a;
+  margin-bottom: 0.8rem;
+}
+
+.contact-box a {
+  color: #475569;
+  text-decoration: none;
+}
+
+.contact-box a:hover {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+.contact-box p,
+.contact-form p {
+  font-size: 1rem;
+  color: #475569;
+  line-height: 1.6;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border-radius: 0.6rem;
+  border: 1px solid #cbd5e1;
+  margin-bottom: 1.2rem;
+  background: #f8fafc;
+  color: #334155;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #94a3b8;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 2px solid #3b82f6;
+  background-color: #ffffff;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form button {
+  background-color: #3b82f6;
+  color: white;
+  font-weight: 600;
+  padding: 0.9rem 2.5rem;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-size: 1rem;
+}
+
+.contact-form button:hover {
+  background-color: #2563eb;
+}
+
+.map-container {
+  border-radius: 1rem;
+  overflow: hidden;
+  max-width: 1000px;
+  margin: 2rem auto 0;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+  border-radius: 1rem;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1e3a8a;
+  margin-bottom: 0.5rem;
+  position: relative;
+  text-align: center;
+}
+
+.section-title::after {
+  content: '';
+  width: 60px;
+  height: 4px;
+  background: #2563eb;
+  display: block;
+  margin: 0.5rem auto 1.5rem;
+  border-radius: 999px;
+}
+
+/* === Footer === */
+footer {
+  background-color: #1e3a8a;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.875rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+/* Section titles */
+.section-title {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 1rem;
+  color: #64748b;
+}
+
+/* Table wrapper */
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin: 2rem auto;
+}
+
+/* Project table */
+.project-table {
+  min-width: 900px;
+  border-collapse: collapse;
+  margin: auto;
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.project-table th,
+.project-table td {
+  border: 1px solid #cbd5e1;
+  padding: 1rem;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.project-table th {
+  background-color: #1e3a8a;
+  color: white;
+}
+
+.project-table tr:nth-child(even) {
+  background-color: #f1f5f9;
+}
+
+/* Back Button */
+.back-btn-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.back-btn {
+    text-decoration: none;
+    background-color: #2563eb;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    display: inline-block;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.back-btn:hover {
+    background-color: #2563eb;
+    transform: translateY(-3px);
+}
