@@ -586,7 +586,7 @@ nav.navbar a:hover {
 
 .carousel-container {
   position: relative;
-  max-width: 1000px;
+  max-width: 950px;
   margin: 0 auto;
   padding: 1rem 0;
   padding-bottom: 2rem;
@@ -879,4 +879,5 @@ footer {
     background-color: #2563eb;
     transform: translateY(-3px);
 }
+
 
