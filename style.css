@@ -26,6 +26,7 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 main {
@@ -878,3 +879,4 @@ footer {
     background-color: #2563eb;
     transform: translateY(-3px);
 }
+
